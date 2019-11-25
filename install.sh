@@ -1,4 +1,5 @@
 useradd -M -r -s /bin/false node_exporter
+yum install wget
 wget https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-amd64.tar.gz
 tar xzf node_exporter-0.18.0.linux-amd64.tar.gz
 cp node_exporter-0.18.0.linux-amd64/node_exporter /usr/local/bin/
