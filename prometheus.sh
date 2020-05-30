@@ -38,5 +38,5 @@ sudo systemctl enable prometheus
 sudo systemctl start prometheus
 grafana-cli admin reset-admin-password danidevix
 echo "password =danidevix ||| reset password via terminal >> |grafana-cli admin reset-admin-password password| "
-rm prometheus-${VERSION}.linux-amd64.tar.gz
-rm -rf prometheus-${VERSION}.linux-amd64
+rm prometheus-${VERSION}.linux-amd64.tar.gz 
+rm -rf prometheus-${VERSION}.linux-amd64 grafana-7.0.0-1.x86_64.rpm
