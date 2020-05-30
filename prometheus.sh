@@ -30,6 +30,7 @@ cat ./prometheus/prometheus.yml | sudo tee /etc/prometheus/prometheus.yml
 cat ./prometheus/prometheus.rules.yml | sudo tee /etc/prometheus/prometheus.rules.yml
 cat ./prometheus/prometheus.service | sudo tee /etc/systemd/system/prometheus.service
 rm -rf /etc/systemd/system/prometheus.service
+wget https://raw.githubusercontent.com/danidevix/node_explorer/master/prometheus.service
 sudo mv prometheus.service /etc/systemd/system/prometheus.service
 sudo systemctl daemon-reload
 sudo systemctl enable prometheus
