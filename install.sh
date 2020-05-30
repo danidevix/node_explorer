@@ -1,5 +1,5 @@
 useradd -M -r -s /bin/false node_exporter
-wget https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-amd64.tar.gz
+wget isantri.moco.co.id/node_exporter-0.18.0.linux-amd64.tar.gz
 wget https://raw.githubusercontent.com/danidevix/node_explorer/master/node_exporter.service
 tar xzf node_exporter-0.18.0.linux-amd64.tar.gz
 cp node_exporter-0.18.0.linux-amd64/node_exporter /usr/local/bin/
