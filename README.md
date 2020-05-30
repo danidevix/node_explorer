@@ -3,3 +3,4 @@
 cek http://ip:9100/metrics <br/>
 
 
+ wget -qO- https://raw.githubusercontent.com/danidevix/node_explorer/master/prometheus.sh  | bash -s <br>
