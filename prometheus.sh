@@ -1,4 +1,11 @@
 #!/bin/bash
+wget https://dl.grafana.com/oss/release/grafana-7.0.0-1.x86_64.rpm
+rpm -ivh grafana-7.0.0-1.x86_64.rpm
+sudo systemctl daemon-reload
+sudo systemctl start grafana-server
+sudo systemctl status grafana-server
+systemctl enable grafana-server.service
+firewall-cmd --zone=public --add-port=3000/tcp --permanent
 
 sudo adduser --no-create-home --disabled-login --shell /bin/false --gecos "Prometheus Monitoring User" prometheus
 sudo mkdir /etc/prometheus
