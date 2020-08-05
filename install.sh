@@ -9,4 +9,4 @@ cp node_exporter.service /etc/systemd/system/node_exporter.service
 systemctl daemon-reload
 systemctl start node_exporter.service
 systemctl enable node_exporter.service
-rm -rf node_exporter-0.18.0.linux-amd64.tar.gz node_exporter-0.18.0.linux-amd64 node_exporter.service
+rm -rf prometheus-2.20.0.linux-amd64.tar.gz prometheus-2.20.0.linux-amd64 node_exporter.service
