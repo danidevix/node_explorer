@@ -12,15 +12,12 @@ sudo mkdir /etc/prometheus
 sudo mkdir /var/lib/prometheus
 sudo touch /etc/prometheus/prometheus.yml
 sudo touch /etc/prometheus/prometheus.rules.yml
-us
-#VERSION=2.2.1
-VERSION=$(curl https://raw.githubusercontent.com/prometheus/prometheus/master/VERSION)
-wget https://github.com/prometheus/prometheus/releases/download/v${VERSION}/prometheus-${VERSION}.linux-amd64.tar.gz
-tar xvzf prometheus-${VERSION}.linux-amd64.tar.gz
-sudo cp prometheus-${VERSION}.linux-amd64/prometheus /usr/local/bin/
-sudo cp prometheus-${VERSION}.linux-amd64/promtool /usr/local/bin/
-sudo cp -r prometheus-${VERSION}.linux-amd64/consoles /etc/prometheus
-sudo cp -r prometheus-${VERSION}.linux-amd64/console_libraries /etc/prometheus
+wget https://github.com/prometheus/prometheus/releases/download/v2.20.1/prometheus-2.20.1.linux-amd64.tar.gz
+tar xvzf prometheus-2.20.1.linux-amd64.tar.gz
+sudo cp prometheus-2.20.1.linux-amd64/prometheus /usr/local/bin/
+sudo cp prometheus-2.20.1.linux-amd64/promtool /usr/local/bin/
+sudo cp -r prometheus-2.20.1.linux-amd64/consoles /etc/prometheus
+sudo cp -r prometheus-2.20.1.linux-amd64/console_libraries /etc/prometheus
 cat ./prometheus/prometheus.yml | sudo tee /etc/prometheus/prometheus.yml
 cat ./prometheus/prometheus.rules.yml | sudo tee /etc/prometheus/prometheus.rules.yml
 cat ./prometheus/prometheus.service | sudo tee /etc/systemd/system/prometheus.service
@@ -38,5 +35,4 @@ sudo systemctl enable prometheus
 sudo systemctl start prometheus
 grafana-cli admin reset-admin-password danidevix
 echo "password =danidevix ||| reset password via terminal >> |grafana-cli admin reset-admin-password password| "
-rm prometheus-${VERSION}.linux-amd64.tar.gz 
-rm -rf prometheus-${VERSION}.linux-amd64 grafana-7.0.0-1.x86_64.rpm
+rm -rf prometheus-2.20.1.linux-amd64.tar.gz prometheus-2.20.1.linux-amd64 grafana-7.0.0-1.x86_64.rpm
