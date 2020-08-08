@@ -1,5 +1,6 @@
 #!/bin/bash
 wget https://dl.grafana.com/oss/release/grafana-7.0.0-1.x86_64.rpm
+yum install -y fontconfig urw-fonts
 rpm -ivh grafana-7.0.0-1.x86_64.rpm
 sudo systemctl daemon-reload
 sudo systemctl start grafana-server
