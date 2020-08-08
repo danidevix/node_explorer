@@ -26,7 +26,7 @@ rm -rf /etc/systemd/system/prometheus.service
 wget https://raw.githubusercontent.com/danidevix/node_explorer/master/prometheus.service
 sudo mv prometheus.service /etc/systemd/system/prometheus.service
 sudo chown -R prometheus:prometheus /etc/prometheus
-sudo chown prometheus:prometheus /var/lib/promethe
+sudo chown prometheus:prometheus /var/lib/prometheus
 sudo chown -R prometheus:prometheus /etc/prometheus/consoles
 sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries
 sudo chown prometheus:prometheus /usr/local/bin/prometheus
