@@ -11,8 +11,4 @@ systemctl start node_exporter.service
 systemctl enable node_exporter.service
 rm -rf node_exporter-1.0.1.linux-amd64.tar.gz node_exporter-1.0.1.linux-amd64 node_exporter.service
 #firewalld
-firewall-cmd --permanent --zone=public --add-rich-rule='
-  rule family="ipv4"
-  source address="0.0.0.0/24"
-  port protocol="tcp" port="9100" accept'
-  firewall-cmd --reload
+
